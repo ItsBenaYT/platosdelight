@@ -1,0 +1,164 @@
+.seccion-cubo {
+    margin: 4rem 0;
+    text-align: center;
+
+    perspective: 1000px;
+
+}
+
+
+.escena-3d {
+    width: 250px;
+    height: 250px;
+
+    margin: 3rem auto;
+    perspective: 1000px;
+}
+
+
+.cubo {
+
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: rotarY 8s infinite linear;
+
+
+}
+
+
+
+.cara {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+
+    color: white;
+    font-weight: 700;
+    font-size: 1.3rem;
+    display: flex;
+
+
+    flex-direction: column;
+    justify-content: center;
+
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    border: 2px solid rgba(255,255,255,0.3);
+}
+
+
+
+.frente  { transform: rotateY(  0deg) translateZ(125px); }
+.atras   { transform: rotateY(180deg) translateZ(125px); }
+.derecha { transform: rotateY( 90deg) translateZ(125px); }
+
+
+.izquierda { transform: rotateY(-90deg) translateZ(125px); }
+.arriba  { transform: rotateX( 90deg) translateZ(125px); }
+.abajo   { transform: rotateX(-90deg) translateZ(125px); }
+
+
+
+@keyframes rotarY {
+    0% { transform: rotateY(0deg); }
+    100% { transform: rotateY(360deg); }
+}
+
+.codigo-evento {
+
+    background: #2c3e50;
+    color: #f1c40f;
+
+    padding: 2rem;
+
+    border-radius: 15px;
+
+    font-family: monospace;
+
+    max-width: 600px;
+
+    margin: 2rem auto;
+
+
+    text-align: left;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.plato-rebote {
+    background: linear-gradient(45deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+
+    color: #2c3e50;
+
+    width: 220px;
+    padding: 2rem;
+
+    margin: 2rem auto;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    font-size: 1.3rem;
+
+
+    font-weight: 700;
+    cursor: pointer;
+    animation: rebote 2s infinite;
+
+    box-shadow: 0 8px 25px rgba(255,154,158,0.4);
+}
+
+@keyframes rebote {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+
+    40% { transform: translateY(-20px); }
+
+    60% { transform: translateY(-10px); }
+}
+
+section {
+
+    margin: 80px 0;
+
+    text-align: center;
+}
+
+section h2 {
+    color: #2c3e50;
+
+    margin-bottom: 25px;
+    
+}
+
+
+@media (max-width: 768px) {
+    .escena-3d {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .cara {
+        width: 200px;
+        height: 200px;
+        font-size: 21px;
+    }
+    
+
+
+    .frente  { transform: rotateY(  0deg) translateZ(100px); }
+    .atras   { transform: rotateY(180deg) translateZ(100px); }
+
+    .derecha { transform: rotateY( 90deg) translateZ(100px); }
+
+    .izquierda { transform: rotateY(-90deg) translateZ(100px); }
+
+    .arriba  { transform: rotateX( 90deg) translateZ(100px); }
+
+    .abajo   { transform: rotateX(-90deg) translateZ(100px); }
+
+}
