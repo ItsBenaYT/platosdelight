@@ -1,0 +1,148 @@
+
+.trans-basica {
+    background: #3498db;
+    color: white;
+    padding: 40px;
+
+    border-radius: 20px;
+
+
+
+    font-size: 25px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: all 0.5s ease;
+
+    margin: 40px auto;
+
+
+    max-width: 300px;
+    text-align: center;
+}
+
+
+.trans-basica:hover {
+    background: #2980b9;
+    transform: scale(1.1);
+    box-shadow: 0 15px 40px rgba(52,152,219,0.4);
+}
+
+
+.trans-rotate {
+    background: #e74c3c;
+
+    color: white;
+    padding: 40px;
+
+    border-radius: 20px;
+
+    font-size: 25px;
+    font-weight: 600;
+
+
+    cursor: pointer;
+
+    transition: all 0.6s ease;
+
+    
+    margin: 40px auto;
+    display: inline-block;
+
+    text-align: center;
+}
+
+.trans-rotate:hover {
+
+    background: #c0392b;
+    transform: rotate(10deg) translateY(-10px);
+
+    box-shadow: 0 20px 50px rgba(231,76,60,0.4);
+}
+
+.galeria-trans {
+    margin: 100px 0;
+}
+
+.contenedor-platos {
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+
+    gap: 40px;
+
+
+    max-width: 1200px;
+
+    margin: 60px auto;
+}
+
+.plato-trans {
+    background: white;
+    border-radius: 15px;
+
+    overflow: hidden;
+
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+
+    transition: all 0.4s ease;
+    cursor: pointer;
+
+}
+
+.plato-trans:hover {
+    transform: translateY(-12px) scale(1.02);
+
+    box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+}
+
+
+.plato-trans img {
+    width: 100%;
+
+    height: 200px;
+
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.plato-trans:hover img {
+    transform: scale(1.05);
+}
+
+.plato-trans h3 {
+
+    padding: 20px;
+    margin: 0;
+
+
+    color: #2c3e50;
+    font-size: 20px;
+
+    text-align: center;
+}
+
+
+section {
+    margin: 80px 0;
+
+    text-align: center;
+}
+
+
+section h2 {
+    color: #2c3e50;
+    margin-bottom: 40px;
+}
+
+
+@media (max-width: 768px) {
+    .contenedor-platos {
+
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+        gap: 25px;
+    }
+}
